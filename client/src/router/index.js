@@ -10,6 +10,10 @@ import BlogCreate from '../components/Blogs/CreateBlog.vue'
 import BlogEdit from '../components/Blogs/EditBlog.vue'
 import BlogShow from '../components/Blogs/ShowBlog.vue'
 
+import ProjectIndex from '../components/Projects/Index.vue'
+import ProjectCreate from '../components/Projects/CreateProject.vue'
+import ProjectEdit from '../components/Projects/EditProject.vue'
+import ProjectShow from '../components/Projects/ShowProject.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -63,6 +67,26 @@ const router = createRouter({
       path: '/blog/:blogId',
       name: 'blog',
       component: BlogShow
+    },
+    {
+      path: '/projects',
+      name: 'projects',
+      component: ProjectIndex
+    },
+    {
+      path: '/project/create',
+      name: 'projects-create',
+      component: ProjectCreate
+    },
+    {
+      path: '/project/edit/:projectId',
+      name: 'project-edit',
+      component: ProjectEdit
+    },
+    {
+      path: '/project/:projectId',
+      name: 'project',
+      component: ProjectShow
     },
   ]
 })
